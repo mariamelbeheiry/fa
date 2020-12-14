@@ -5,6 +5,8 @@
  */
 package fa;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Mohamed
@@ -15,8 +17,17 @@ public class File {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("sajnfjjdsa");
+      Scanner s=new Scanner(System.in);
+        System.out.println("Choose one of those Algorithms:-\n");
+        System.out.println("1-Contigous Memory Allocatoin\n2-Linked Memory Allocation\n3-Indexed Memory Allocation\n");
+        int choice=s.nextInt();
+        if (choice==1) {
+         Contigous x=new Contigous();
+         x.contigousAllocation();   
+        }
+         else
+            System.out.println("javaapplication16.JavaApplication16.main()");
+
     }
     
 }
