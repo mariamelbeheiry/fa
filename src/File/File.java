@@ -6,6 +6,7 @@
 package File;
 
 import java.util.Scanner;
+import javafx.scene.shape.Line;
 
 /**
  *
@@ -24,6 +25,10 @@ public class File {
         if (choice==1) {
          Contigous x=new Contigous();
          x.contigousAllocation();   
+        }
+        else  if (choice==2) {
+         Linked x=new Linked();
+         x.linked();
         }
          else
             System.out.println("javaapplication16.JavaApplication16.main()");
