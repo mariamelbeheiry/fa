@@ -10,6 +10,6 @@ package fa;
  * @author Mohamed
  */
 public class C {
-    
+    String x;
     
 }
