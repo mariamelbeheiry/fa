@@ -9,7 +9,7 @@ package fa;
  *
  * @author Mohamed
  */
-public class FA {
+public class File {
 
     /**
      * @param args the command line arguments

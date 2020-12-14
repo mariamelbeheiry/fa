@@ -9,9 +9,9 @@ package fa;
  *
  * @author Mohamed
  */
-public class C {
+public class Contigous {
     String x;
-        String x2;
+    String x2;
 
     
 }
