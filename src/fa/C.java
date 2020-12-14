@@ -11,5 +11,7 @@ package fa;
  */
 public class C {
     String x;
+        String x2;
+
     
 }
