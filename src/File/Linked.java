@@ -16,12 +16,13 @@ import java.util.Scanner;
 public class Linked {
 int MemoryNumberOfBlocks;
 int NumberOfFiles;
+int MNB;
 void linked (){
     Scanner s=new Scanner(System.in);
     
     System.out.println("Enter the number of Blocks in your Disk");
     MemoryNumberOfBlocks=s.nextInt();
-    
+    MNB=MemoryNumberOfBlocks;
     System.out.println("Enter Number Of Files");
     NumberOfFiles=s.nextInt();
         int FileNumberOfBlocks[]=new int[NumberOfFiles];
@@ -32,6 +33,7 @@ void linked (){
         FileName[i]=s.next();
         System.out.println("Enter the Number of Blocks of File named -->"+FileName[i]);
         FileNumberOfBlocks[i]=s.nextInt();
+    //MNB-=FileNumberOfBlocks[i];
     }
      Random rand = new Random();
      int index;
@@ -39,38 +41,40 @@ void linked (){
     String x[]=new String[MemoryNumberOfBlocks];
      
     
-        for (int i = 0; i <NumberOfFiles; i++) {
+        for (int i = 0; i <NumberOfFiles; i++)
+        {
             System.out.print("FileNamed\t"+FileName[i]+"\tBlocks in memory are");
-            for (int j = 0; j < FileNumberOfBlocks[i]; j++) {
-                 index=rand.nextInt(MemoryNumberOfBlocks);
-                 int ctr=0;
-                
-                 while (ctr<MemoryNumberOfBlocks) {                    
+            for (int j = 0; j < FileNumberOfBlocks[i]; j++)
+            {
+                 index=rand.nextInt(MemoryNumberOfBlocks);                    
+                 while (true)
+                 {                    
                     
-                 if (x[index]==null) {
-                    x[index]=FileName[i];
-                     System.out.print("\t"+index);
-                break;
-                 }
-                 ctr++;
+                    if (x[index]==null) 
+                    {
+                        x[index]=FileName[i];
+                        System.out.print("\t"+index);
+                        break;
+                    }
+                    else  if (x[index]!=null)
+                    {
+                        index=rand.nextInt(MemoryNumberOfBlocks);    
+                 
+                     }
+                 
                          
                      
-            }                }
-            System.out.println("");
-    }
-        System.out.println("n\n\n");
-  
-            for (int j = 0; j <MemoryNumberOfBlocks; j++) {
-                System.out.print(x[j]+"\t");
-                if (j%10==0) { System.out.println("\n");
-
-                }
+                }                
+            }
+ System.out.println("");
+        }
+      
             }
 
 
 
 
-}
+
 
     
 }
